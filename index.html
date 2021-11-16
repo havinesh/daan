@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     
     <!-- footer-->
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
+    <!-- icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
     <title>Hello, world!</title>
 
@@ -28,6 +31,57 @@
         .mySlides {
             display: none
         }
+        .row{
+  display: flex;
+  padding: 20px;
+  margin-top: 30px;
+}
+p{
+  font-size: 20px;
+  word-wrap: break-word;
+}
+.col-6{
+	width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.parent{
+	height: 100%;
+	display: -webkit-flex;
+  display: -ms-flexbox;
+
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.mobile-visible{
+  display: none;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) { 
+  .row{
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .col-6{
+    min-width: 100%
+  }
+  .visible{
+  display: none;
+  }
+  .mobile-visible{
+    display: block;
+  }
+  p{
+    font-size: 16px;
+  }
+}
+
     </style>
 </head>
 
@@ -36,14 +90,16 @@
     <nav>
         <input id="nav-toggle" type="checkbox">
         <div class="logo">
-            <strong>Daan Foundation</strong>
+            <a href="./index.html">
+                <strong>Daan Foundation</strong>
+            </a>
         </div>
         <ul class="links">
             <li><a href="#">Home</a></li>
             <li><a href="./about.html">About Us</a></li>
             <li><a href="./team.html">Team</a></li>
-            <li><a href="#">Donation</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="./donation.html">Donation</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
         </ul>
         <label for="nav-toggle" class="icon-burger">
             <div class="line"></div>
@@ -52,7 +108,7 @@
         </label>
     </nav>
 
-    <div style="margin-top: 70px;">
+    <div style="margin-top: 50px;">
         <div class="mySlides w3-display-container w3-center" >
             <img src="https://wallpaper.dog/large/5457706.jpg" style="width:100%">
             <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
@@ -76,7 +132,7 @@
 
     </div>
 
-    <section class="section_all bg-light" id="about">
+    <!-- <section class="section_all bg-light" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -115,15 +171,111 @@
             </div>
     
         </div>
-    </section>
+    </section> -->
 
 
+    <div class="row">
     
-            
+        <div class="col-6">
+            <div class="parent">
+                <h1>
+                    What Defines Us?
+                </h1>
+            </div>
+        </div>
+        <div class="col-6">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+    <!-- <div class="row">
+    
+        <div class="col-6">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/09/640/320/Kids-playing-a-park-FBN.jpg?ve=1&tl=1" alt="">
+        </div>
+        <div class="col-6">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/09/640/320/Kids-playing-a-park-FBN.jpg?ve=1&tl=1" alt="">
+        </div>
+    </div> -->
+    
+    
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <div>
+        <h1 style="text-align: center;">Donation</h1>
+
+        <div class="row">
+        
+            <div class="col-6">
+                <div class="">
+                    <h1 style="text-align: center;">
+                        Money Donation
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard <br>
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen
+                        book.
+                    </p>
+                    <a href="./donation.html">Click Here to know more -></a> 
+                </div>
+            </div>
+            <div class="col-6">
+                <h1 style="text-align: center;">Things Donation</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard <br>
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen
+                    book. 
+                </p>
+                <a href="./donation.html">Click Here to know more -></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="contact-area" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="contact-content text-center">
+                        <a href="#" style="text-decoration: none; color: green;"><h3>Daan Foundation</h3></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Quis ipsum </p>
+                        <div class="hr"></div>
+                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</h6>
+                        <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
+                        <div class="contact-social">
+                            <ul>
+                                <li><a class="hover-target" href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-github"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-behance"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============== 1.9 Contact Area End ====================-->
+    <!-- =============== 1.9 Footer Area Start ====================-->
+    <footer>
+        <p>Copyright &copy; 2021  All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 
 
