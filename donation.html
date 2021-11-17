@@ -231,7 +231,7 @@ input[type=submit]:hover {
                     To donate things click below <br>
                 </p>
                 <!-- Trigger/Open The Modal -->
-                <button id="myBtn">Open Modal</button>
+                <button id="myBtn" style="background-color: green;">Donate Now</button>
                 
                 
                 <!-- The Modal -->
@@ -241,18 +241,23 @@ input[type=submit]:hover {
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="container">
-                            <form action="/action_page.php">
+                            <form id="add-donation-form">
                                 <label for="fname">Full Name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <input type="text" id="fname" name="name" placeholder="Your name..">
                 
-                                <label for="lname">Email</label>
-                                <input type="text" id="lname" name="lastname" placeholder="Your email id..">
-                
-                                <label for="subject">Address</label>
-                                <textarea id="subject" name="subject" placeholder="Write Your Address.."
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" placeholder="Your email id..">
+
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date">
+                                <!-- <input type="text" id="lname" name="lastname" placeholder="Your email id.."> -->
+                                <br>
+                                <label for="Address">Address</label>
+                                <textarea id="address" name="address" placeholder="Write Your Address.."
                                     style="height:200px"></textarea>
                 
-                                <input type="submit" value="Submit">
+                                <!-- <input type="submit" value="Submit"> -->
+                                <button class="btn btn-block" type="submit" onclick="myDonation()">Send Now!</button>
                             </form>
                         </div>
                 
@@ -338,6 +343,24 @@ input[type=submit]:hover {
                 }
             }
     </script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDk8n2YP1ylDaJluTjugU-oRxKtWF5f90A",
+            authDomain: "daan-3edc0.firebaseapp.com",
+            projectId: "daan-3edc0",
+            storageBucket: "daan-3edc0.appspot.com",
+            messagingSenderId: "437178869772",
+            appId: "1:437178869772:web:f93ab3441a6381f1a36629",
+            measurementId: "G-0VDRMK1244"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    
+    <script src="./assets/js/donation.js"></script>
 
 </body>
 
